@@ -1,0 +1,67 @@
+		* {
+			text-align: center;
+
+		}
+
+		fieldset{
+			border: 2px solid;
+			width: 500px;
+			margin:auto;
+		}
+
+		.e1{
+			color: red;
+		}
+
+		a:hover {
+			background-color: gray;
+  			color: black;
+		}
+
+		#sub1:hover {
+			background-color: #3399ff;
+			opacity: 0.8;
+
+		}
+
+		#sub1{
+			border: 2px solid #ccc;
+  			border-radius: 4px;
+		}
+
+		#sub2:hover {
+			background-color: gray;
+  			color: black;
+
+		}
+		
+		#sub2{
+			border: 2px solid #ccc;
+  			border-radius: 4px;
+		}
+		#sub1, #sub2 {
+		  color: white;
+		  padding: 14px 20px;
+		  margin: 8px 0;
+		  border: none;
+		  cursor: pointer;
+		  width: 30%;
+		}
+		#sub1{
+			width: auto;
+			padding: 10px 35px;
+			background-color: #04AA6D;
+		}
+		#sub2{
+			width: auto;
+			padding: 10px 35px;
+			background-color: #f44336;
+		}
+		input[type=text], input[type=password] {
+		  width: 100%;
+		  padding: 12px 20px;
+		  margin: 8px 0;
+		  display: inline-block;
+		  border: 2px solid #ccc;
+		  box-sizing: border-box;
+		}

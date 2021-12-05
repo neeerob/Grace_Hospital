@@ -1,0 +1,61 @@
+<style>
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 15px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 35px;
+  font-weight: bold;
+  color: #339933;
+}
+
+.header a:hover {
+  background-color: gray;
+  color: black;
+}
+
+.header a.active {
+  background-color: dodgerblue;
+  color: white;
+}
+
+/* Float the link section to the right */
+.header-right {
+  float: right;
+}
+
+div.header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  border: 2px ;
+}
+
+</style>
+<body>
+	<div class="header">
+  <a href="../controller/Home.php" class="logo"><b>Grace Hospital</b></a>
+  <div class="header-right">
+    <a href="../controller/Home.php">Home</a>
+    <a class="active" href="../view/Login.php">Admin Login</a>
+    <a href="../controller/Home.php">User Login</a>
+    <a href="../controller/Home.php">Doctor Login</a>
+    <a href="../controller/Home.php">Staff Login</a>
+  </div>
+</div>
+
+</body>
