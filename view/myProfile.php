@@ -29,5 +29,9 @@
 <body>
 	<?php include('../Include/adminHeader.html'); ?>
 
+	<?php include('../Include/Footer.html'); ?>
+
+
+
 </body>
 </html>
