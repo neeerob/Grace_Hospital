@@ -18,5 +18,7 @@ function isValid(login){
 
 		return true;
 	}
-
 }
+
+
+

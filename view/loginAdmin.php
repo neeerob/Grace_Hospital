@@ -1,3 +1,15 @@
+<?php 
+	session_start();
+
+	if(count($_SESSION) != 0){
+
+		header("Location: profile_admin.php");
+	}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +17,7 @@
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../view/CSS/loginAdmin.css">
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="../view/JS/login-admin-validation.js"></script>
 <body>
 	<?php include('../Include/loginHeader.html'); ?>
@@ -14,7 +27,7 @@
 	<fieldset>
 		<legend> <b>Admin Login</b> </legend>
 		<br>
-			<form name = "login" onsubmit="return isValid(this);" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
+			<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" name = "login" onsubmit="return isValid(this);" method="POST">
 					<br>
 					<label>Username: </label>
 					<input type="text" placeholder="Enter username" name="userName" value="<?php if(isset($_COOKIE["userName"])) { echo $_COOKIE["userName"]; } ?>" >
@@ -34,9 +47,11 @@
 					<input id = "sub1" type="submit" name="Login" value="Login">
 			</form>
 
+			<div id="txtHint"><b></b></div>
+
 			<?php 
 
-				if($_SERVER['REQUEST_METHOD'] === "POST"){
+			if($_SERVER['REQUEST_METHOD'] === "POST"){
 
 				$userName = $_POST['userName'];
 				$password = $_POST['password'];
@@ -48,7 +63,7 @@
 					$servername = "localhost";
 						$user = "root";
 						$pass = "";
-						$dbname = "chat-app";
+						$dbname = "g-hospital";
 
 						$connection = new mysqli($servername, $user, $pass, $dbname);
 
@@ -57,7 +72,7 @@
 						}
 						else{
 							
-							$sql = "select * from user where userName = '".$userName."' and password = '".$password."'";
+							$sql = "select * from admin_info where userName = '".$userName."' and password = '".$password."'";
 
 							
 							$loginFlag = false;
@@ -66,8 +81,6 @@
 
 							if ($data->num_rows > 0) {
 								while ($row = $data->fetch_assoc()) {
-
-									/*$userName = $row["userName"];*/
 									$loginFlag = true;
 									if($loginFlag === true){
 
@@ -78,13 +91,14 @@
 
 											session_start();
 											$_SESSION['userName'] = $userName;
+											header("Location: ../view/profile_admin.php");
 											
 										}
 
 										else{
 										session_start();
 										$_SESSION['userName'] = $userName;
-										header("Location: home.php");
+										header("Location: ../view/profile_admin.php");
 
 										}
 									}
@@ -101,9 +115,9 @@
 
 			}
 
-			?>
+		?>
 
-			<p><b>Don't have a account? Click <a href="registration.php">here</a> to register.</b></p>
+		<p><b>Don't have a account? Click <a href="registration.php">here</a> to register.</b></p>
 		
 	</fieldset>
 	<br>
