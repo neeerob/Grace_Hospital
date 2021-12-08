@@ -32,9 +32,9 @@
 		
 			<a href="../view/reg_admin.php" class="button">Add a Admin</a>
 			<br><br>
-			<a href="https://google.com" class="button">Create Staff account</a>
+			<a href="../view/reg_staff.php" class="button">Create Staff account</a>
 			<br><br>
-			<a href="https://google.com" class="button">Give discount to patient</a>
+			<a href="../view/discount_patient.php" class="button">Give discount to patient</a>
 			<br>
 			<br>
 			<a href="https://google.com" class="button">Validate/Activite Doctor account</a>
