@@ -17,7 +17,7 @@
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="../view/CSS/loginAdmin.css">
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script src="../view/JS/login-admin-validation.js"></script>
 <body>
 	<?php include('../Include/loginHeader.html'); ?>
@@ -72,7 +72,7 @@
 						}
 						else{
 							
-							$sql = "select * from admin_info where userName = '".$userName."' and password = '".$password."'";
+							$sql = "select * from admin_info where username = '".$userName."' and password = '".$password."'";
 
 							
 							$loginFlag = false;
@@ -82,8 +82,27 @@
 							if ($data->num_rows > 0) {
 								while ($row = $data->fetch_assoc()) {
 									$loginFlag = true;
-									if($loginFlag === true){
+									if($loginFlag === true && $row["email"] === null){
 
+										if(!empty($_POST["remember"])){
+
+											setcookie ("userName",$userName,time()+ 3600);
+											setcookie ("password",$password,time()+ 3600);	
+
+											session_start();
+											$_SESSION['userName'] = $userName;
+											header("Location: ../view/myProfile.php");
+											
+										}
+
+										else{
+										session_start();
+										$_SESSION['userName'] = $userName;
+										header("Location: ../view/myProfile.php");
+
+										}
+									}
+									else{
 										if(!empty($_POST["remember"])){
 
 											setcookie ("userName",$userName,time()+ 3600);
@@ -116,8 +135,8 @@
 			}
 
 		?>
-
-		<p><b>Don't have a account? Click <a href="registration.php">here</a> to register.</b></p>
+		<br><br>
+		<b>Forget password? Send a email <a href = "mailto:abc@example.com?subject = Feedback&body = Message">here</a> with username to reset password.</b><br>
 		
 	</fieldset>
 	<br>

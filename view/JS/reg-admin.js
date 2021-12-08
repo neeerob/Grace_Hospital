@@ -1,7 +1,7 @@
 function sendData(formData){
 	if(formData.firstname.value === "" || formData.lastname.value === ""||formData.userName.value === ""||formData.password.value === "" ||formData.password.value.length < 8){
 		if(formData.firstname.value === ""){
-		document.getElementById("errorMsgName").innerHTML = "Please fill first name!";
+			document.getElementById("errorMsgName").innerHTML = "Please fill first name!";
 		}
 		else{
 			document.getElementById("errorMsgName").innerHTML = "";
