@@ -48,7 +48,7 @@
 					if ($res) {
 						echo "<b>Successfully given discount!</b>";
 						/*header("Location: ../view/discount_patient.php");*/
-						echo '<br><br><button id = "sub2" onClick="window.location.href=window.location.href">Refresh Page</button>';
+						/*echo '<br><br><button id = "sub2" onClick="window.location.href=window.location.href">Refresh Page</button>';*/
 						/*header("Refresh:0");*/
 						/*function_alert("We welcome the New World");
 
@@ -64,8 +64,6 @@
 				else{
 									
 					echo '<b style="color: red;">This user may be deleted!</b>';
-					echo "ode $username";
-					echo "ode $percent";
 				}
 				$connection->close();
 			}

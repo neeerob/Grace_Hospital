@@ -37,7 +37,7 @@
 			<a href="../view/discount_patient.php" class="button">Give discount to patient</a>
 			<br>
 			<br>
-			<a href="https://google.com" class="button">Validate/Activite Doctor account</a>
+			<a href="../view/activated_doctor.php" class="button">Validate/Activite Doctor account</a>
 			<br><br>
 			<a href="https://google.com" class="button">Delete Staff account</a>
 			<br><br>

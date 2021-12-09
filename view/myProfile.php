@@ -149,7 +149,7 @@
 					<p id = "errorMsgEmail" class="e1"></p>
 
 					<input id = "sub2" type="reset" name="reset" value="Reset" >
-					<input id = "sub1" type="submit" name="Register" value="Register">
+					<input id = "sub1" type="submit" name="Register" value="Update">
 			</form>
 			<p id="msg"></p>
 		</fieldset>

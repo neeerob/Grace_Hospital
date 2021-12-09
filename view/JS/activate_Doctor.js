@@ -1,9 +1,7 @@
-
 function sendData(formData){
-	const percent = login.discount_patient.value;
 	const user = formData.remember.value;
 	if(formData.remember.value === ""){
-		document.getElementById("msg1").innerHTML = "Please select a user!";
+		document.getElementById("msg1").innerHTML = "Please select a Doctor!";
 	}
 	else{
 		document.getElementById("msg1").innerHTML = "";
@@ -17,7 +15,6 @@ function sendData(formData){
 			xhttp.open(formData.method, formData.action);
 			xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			const myData = {
-				"percent" : formData.discount_patient.value,
 				"username" : formData.remember.value,
 			}
 			xhttp.send("obj="+JSON.stringify(myData));
