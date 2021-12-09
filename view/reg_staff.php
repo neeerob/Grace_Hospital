@@ -4,10 +4,11 @@
 
 	if(count($_SESSION) == 0){
 
-		header("Location: ../controller/Logout.php");
+		header("Location: ../view/loginAdmin.php");
 	}
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

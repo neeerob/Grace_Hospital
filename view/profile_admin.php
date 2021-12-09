@@ -4,10 +4,11 @@
 
 	if(count($_SESSION) == 0){
 
-		header("Location: ../controller/Logout.php");
+		header("Location: ../view/loginAdmin.php");
 	}
 
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -44,7 +45,7 @@
 			<a href="../view/delete_doctor.php" class="button">Delete Doctor account</a>
 			<br>
 			<br>
-			<a href="https://google.com" class="button">Change staff work schedule</a>
+			<a href="change_staff_workTime.php" class="button">Change staff work schedule</a>
 			<br>
 			<br>
 		
