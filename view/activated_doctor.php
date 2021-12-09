@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Add admin</title>
+	<title>Activate doctor</title>
 	<link rel="stylesheet" type="text/css" href="../view/CSS/table.css">
 	<style>
 		#msg1{
@@ -51,10 +51,16 @@
 
 			</form>
 
+			<p id="msgOk" ></p>
+
 			<script>
+
+				$('#tableSelect tr').click(function() {
+				    $(this).find('th input:radio').prop('checked', true);
+				})
 								
 				function myFun(){
-					$('#tableSelect').load(location.href + " #tableSelect");
+					$('#refresh-table').load(location.href + " #refresh-table");
 				}
 			</script>
 

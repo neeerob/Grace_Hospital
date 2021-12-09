@@ -39,9 +39,9 @@
 			<br>
 			<a href="../view/activated_doctor.php" class="button">Validate/Activite Doctor account</a>
 			<br><br>
-			<a href="https://google.com" class="button">Delete Staff account</a>
+			<a href="../view/delete_staff.php" class="button">Delete Staff account</a>
 			<br><br>
-			<a href="https://google.com" class="button">Delete Doctor account</a>
+			<a href="../view/delete_doctor.php" class="button">Delete Doctor account</a>
 			<br>
 			<br>
 			<a href="https://google.com" class="button">Change staff work schedule</a>

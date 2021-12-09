@@ -12,7 +12,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Add admin</title>
+	<title>Add Staff</title>
 	<link rel="stylesheet" type="text/css" href="../view/CSS/loginAdmin.css">
 	<style>
 		#msg{

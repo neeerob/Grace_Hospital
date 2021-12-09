@@ -1,7 +1,7 @@
 function sendData(formData){
 	const user = formData.remember.value;
 	if(formData.remember.value === ""){
-		document.getElementById("msg1").innerHTML = "Please select a Doctor!";
+		document.getElementById("msg1").innerHTML = "Please select a Staff!";
 	}
 	else{
 		document.getElementById("msg1").innerHTML = "";
