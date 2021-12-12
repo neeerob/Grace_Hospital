@@ -12,6 +12,7 @@ function sendData(formData){
 			xhttp.onreadystatechange = function() {
 				if (this.readyState === 4 && this.status === 200) {
 					document.getElementById("msgOk").innerHTML = this.responseText;
+					$('#refresh-table').load(location.href + " #refresh-table");
 				}
 			}
 			xhttp.open(formData.method, formData.action);

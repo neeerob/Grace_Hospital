@@ -31,7 +31,7 @@
 		 <b id="p1" style="font-size: 20px;">Wellcome, <?php echo $_SESSION['userName']; ?>. You have admin privilege. You can manipulate the following data/functionality.</b><br><br><br>
 		 
 		
-			<a href="../view/reg_admin.php" class="button">Add a Admin</a>
+			<a href="../view/reg_admin.php" class="button">Create Admin account</a>
 			<br><br>
 			<a href="../view/reg_staff.php" class="button">Create Staff account</a>
 			<br><br>
@@ -45,7 +45,7 @@
 			<a href="../view/delete_doctor.php" class="button">Delete Doctor account</a>
 			<br>
 			<br>
-			<a href="change_staff_workTime.php" class="button">Change staff work schedule</a>
+			<a href="../view/change_staff_workTime.php" class="button">Change staff work schedule</a>
 			<br>
 			<br>
 		

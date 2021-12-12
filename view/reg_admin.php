@@ -22,6 +22,8 @@
 	</style>
 </head>
 <script src="../view/JS/reg-admin.js"></script>
+<script src="../view/JS/admin_UniqueName.js"></script>
+<script src="../view/JS/password_chack.js"></script>
 <body>
 	<?php include('../Include/adminHeader.html'); ?>
 	<p>Welcome to <b>Admin account</b> create page. You can only give basic credential and <b>login</b> information. He/She can provide basic information directly from his/her profile change these information later. </p>
@@ -41,12 +43,12 @@
 					<p id = "errorMsgLast" class="e1"></p>
 
 					<label>Username: </label>
-					<input type="text" placeholder="Enter a unique username" name="userName" >
+					<input type="text" placeholder="Enter a unique username" name="userName" onkeyup="showHint(this.value)" >
 
 					<p id = "errorMsgUser" class="e1"></p>
 
 					<label>Password: </label>
-					<input type="password" placeholder="Enter Password" name="password" >
+					<input type="password" placeholder="Enter Password" name="password" onkeyup="showPass(this.value)">
 					
 					<p id = "errorMsgPass" class="e1"></p>
 

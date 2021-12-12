@@ -26,6 +26,7 @@
 	</style>
 </head>
 <script src="../view/JS/change_admin_password.js"></script>
+<script src="../view/JS/password_chack.js"></script>
 <body>
 
 	<?php include('../Include/adminHeader.html'); ?>
@@ -43,12 +44,12 @@
 					<p id = "errorPassr" class="e1"></p>
 
 					<label>New password: </label>
-					<input type="password" name="password">
+					<input type="password" name="password" onkeyup="showPassA1(this.value)">
 					
 					<p id = "errorNew" class="e1"></p>
 
 					<label>Confirm password: </label>
-					<input type="password" name="conPassword">
+					<input type="password" name="conPassword"onkeyup="showPassA2(this.value)">
 					
 					<p id = "errorCon" class="e1"></p>
 
@@ -56,7 +57,7 @@
 					<input id = "sub1" type="submit" name="Login" value="Change Password">
 			</form>
 			<p id="msg"></p>
-			<p><b>Don't have a account? Click <a href="registration.php">here</a> to register.</b></p>
+			<b>Forget password? Send a email <a href = "mailto:neeerob.ahmed@gmail.com?subject = Forgate password & body = Message">here</a> with username to reset password.</b><br>
 			
 	</fieldset>
 	<br>
