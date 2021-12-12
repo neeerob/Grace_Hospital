@@ -21,43 +21,48 @@
 			echo "<b>Please fill up the form properly</b>";
 		}
 		else {
-			$servername = "localhost";
-			$us = "root";
-			$pass = "";
-			$dbname = "g-hospital";
-
-			$connection = new mysqli($servername, $us, $pass, $dbname);
-
-			if ($connection->connect_error) {
-				die("Connection failed: " . $connection->connect_error);
+			if(strlen($phone) <= 10){
+				echo '<b style = " color: red">Please give valid phone number</b>';
 			}
 			else{
+				$servername = "localhost";
+				$us = "root";
+				$pass = "";
+				$dbname = "g-hospital";
 
-				$sql = "select * from admin_info where username = '".$username."'";
+				$connection = new mysqli($servername, $us, $pass, $dbname);
 
-				$data = $connection->query($sql);
-
-				if ($data->num_rows > 0) {
-					$sql = "UPDATE admin_info set fName = ?, lName = ?, gender = ?, DOB = ?, religion = ?, present_add = ?, parma_add = ?, phone = ?, email = ? WHERE username = '".$username."'";
-
-
-					$stmt = $connection->prepare($sql);
-					$stmt->bind_param("sssssssss", $fname, $lname, $gender, $DOB, $religion, $present_Address, $permanent_Address, $phone, $email);
-					$res = $stmt->execute();
-
-					if ($res) {
-						echo "<b>Successfully updated information</b>";
-					}
-					else {
-						echo "<b>Error while updating!</b>";
-					}
-									
+				if ($connection->connect_error) {
+					die("Connection failed: " . $connection->connect_error);
 				}
 				else{
-									
-					echo "<b>Your account may be deleted!</b>";
+
+					$sql = "select * from admin_info where username = '".$username."'";
+
+					$data = $connection->query($sql);
+
+					if ($data->num_rows > 0) {
+						$sql = "UPDATE admin_info set fName = ?, lName = ?, gender = ?, DOB = ?, religion = ?, present_add = ?, parma_add = ?, phone = ?, email = ? WHERE username = '".$username."'";
+
+
+						$stmt = $connection->prepare($sql);
+						$stmt->bind_param("sssssssss", $fname, $lname, $gender, $DOB, $religion, $present_Address, $permanent_Address, $phone, $email);
+						$res = $stmt->execute();
+
+						if ($res) {
+							echo "<b>Successfully updated information</b>";
+						}
+						else {
+							echo '<b style = " color: red">Error while updating!</b>';
+						}
+										
+					}
+					else{
+										
+						echo "<b>Your account may be deleted!</b>";
+					}
+					$connection->close();
 				}
-				$connection->close();
 			}
 		}
 	}
