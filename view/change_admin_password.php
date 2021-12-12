@@ -49,7 +49,7 @@
 					<p id = "errorNew" class="e1"></p>
 
 					<label>Confirm password: </label>
-					<input type="password" name="conPassword"onkeyup="showPassA2(this.value)">
+					<input type="password" name="conPassword" onkeyup="showPassA2(this.value)">
 					
 					<p id = "errorCon" class="e1"></p>
 

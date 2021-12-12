@@ -31,7 +31,7 @@
 					}
 					else{
 
-						$sql = "select * from admin_info where username = '".$username."'";
+						$sql = "select * from admin_info where username = '".$username."' and password = '".$old."'";
 
 						$data = $connection->query($sql);
 
@@ -53,7 +53,7 @@
 						}
 						else{
 											
-							echo "<b>Your given old password is wrong!</b>";
+							echo '<b style = " color: red">Your given old password is wrong!</b>';
 						}
 						$connection->close();
 					}

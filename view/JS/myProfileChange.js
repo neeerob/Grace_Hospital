@@ -1,6 +1,6 @@
 function sendData(formData){
-	if(formData.firstname.value === "" || formData.lastname.value === "" || formData.gender.value === ""|| formData.birthday.value === ""|| formData.religion.value === ""|| formData.permanent_Address.value === ""|| formData.present_Address.value === ""|| formData.phone.value === ""|| formData.email.value === ""){
-
+	if(formData.firstname.value === "" || formData.lastname.value === "" || formData.gender.value === ""|| formData.birthday.value === ""|| formData.religion.value === ""|| formData.permanent_Address.value === ""|| formData.present_Address.value === ""|| formData.phone.value === ""|| formData.email.value === "" || formData.phone.value.length <= 11){
+		document.getElementById("msg").innerHTML = "";
 		if(formData.firstname.value === ""){
 			document.getElementById("errorMsgName").innerHTML = "Please fill first name!";
 		}
@@ -56,6 +56,14 @@ function sendData(formData){
 			document.getElementById("errorMsgPresentAdd").innerHTML = "";
 		}
 
+		if(formData.phone.value.length >= 11){
+			document.getElementById("errorMsgphone").innerHTML = "Give currect phone number";
+		}
+
+		else{
+			document.getElementById("errorMsgphone").innerHTML = "";
+		}
+
 
 		if(formData.phone.value === ""){
 			document.getElementById("errorMsgphone").innerHTML = "Please fill phone number!";
@@ -64,15 +72,12 @@ function sendData(formData){
 			document.getElementById("errorMsgphone").innerHTML = "";
 		}
 
-
 		if(formData.email.value === ""){
 			document.getElementById("errorMsgEmail").innerHTML = "Please fill email!";
 		}
 		else{
 			document.getElementById("errorMsgEmail").innerHTML = "";
 		}
-
-
 		
 	}
 	else{
@@ -87,7 +92,7 @@ function sendData(formData){
 		document.getElementById("errorMsgEmail").innerHTML = "";
 		document.getElementById("errorMsgUser").innerHTML = "";
 
-		const xhttp = new XMLHttpRequest();
+			const xhttp = new XMLHttpRequest();
 			xhttp.onreadystatechange = function() {
 				if (this.readyState === 4 && this.status === 200) {
 					document.getElementById("msg").innerHTML = this.responseText;
@@ -109,6 +114,5 @@ function sendData(formData){
 
 			}
 			xhttp.send("obj="+JSON.stringify(myData));
-	}
-
+		}
 }
