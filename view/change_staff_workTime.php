@@ -52,6 +52,10 @@
 						<option value="8:00 PM - 2:00 AM">8:00 PM - 2:00 AM</option>
 						<option value="11:00 PM - 6:00 AM">11:00 PM - 6:00 AM</option>
 						<option value="6:00 PM - 1:00 AM">6:00 PM - 1:00 AM</option>
+						<option value="Morning">Morning</option>
+						<option value="Noon">Noon</option>
+						<option value="Evening">Evening</option>
+						<option value="Night">Night</option>
 					</select> 
 
 					<p id="msg1" ></p>
