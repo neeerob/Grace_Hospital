@@ -6,7 +6,6 @@
 
 		$username = $decode->username;
 
-
 		if (empty($username)) {
 			echo "<b>Please Select a user!</b>";
 		}
